@@ -13,8 +13,33 @@ const { listenerCount } = require('process');
 
 const teamArray = [];
 
-// MANAGER QUESTIONS
-const managerQuestions = [
+// ADD NEW EMPLOYEE QUESTION
+// const addEmployee = [
+//   {
+//     type: 'list',
+//     message: 'Choose an employee to add:',
+//     name: 'role',
+//     choices: [
+//       'Engineer',
+//       'Intern',
+//       'N/A'
+//     ]
+//   }
+// ]
+
+// EMPLOYEE QUESTIONS
+const questions = [// make default manager so first time it comes up manager
+  {
+    type: 'list',
+    message: 'Choose an employee to add:',
+    name: 'role',
+    choices: [
+      'Engineer',
+      'Intern',
+      'There are no more employees to enter.'
+    ],
+    // when: (input) => input.role !== "Manager"
+  },
   {
     type: 'input',
     message: 'Enter the Team Manager\'s name:',
@@ -26,7 +51,8 @@ const managerQuestions = [
         console.log ("Try entering the Team Manager\'s name again:");
         return false;
       }
-    }
+    },
+    when: (input) => input.role === "Manager"
   },
   {
     type: 'input',
@@ -39,7 +65,8 @@ const managerQuestions = [
         console.log ("Try entering the Team Manager\'s employee ID again:");
         return false;
       }
-    }
+    },
+    when: (input) => input.role === "Manager"
   },
   {
     type: 'input',
@@ -52,7 +79,8 @@ const managerQuestions = [
         console.log ("Try entering the Team Manager\'s email address again:");
         return false;
       }
-    }
+    },
+    when: (input) => input.role === "Manager"
   },
   {
     type: 'input',
@@ -65,26 +93,9 @@ const managerQuestions = [
         console.log ("Try entering the Team Manager\'s office number again:");
         return false;
       }
-    }
-  }
-]
-
-// ADD NEW EMPLOYEE QUESTION
-const addEmployee = [
-  {
-    type: 'list',
-    message: 'Choose an employee to add:',
-    name: 'employeeChoice',
-    choices: [
-      'Engineer',
-      'Intern',
-      'N/A'
-    ]
-  }
-]
-
-// ENGINEER QUESTIONS
-const engineerQuestions = [
+    },
+    when: (input) => input.role === "Manager"
+  },
   {
     type: 'input',
     message: 'Enter the Engineer\'s name:',
@@ -96,7 +107,8 @@ const engineerQuestions = [
         console.log ("Try entering the Engineer\'s name again:");
         return false;
       }
-    }
+    },
+    when: (input) => input.role === "Engineer"
   },
   {
     type: 'input',
@@ -109,7 +121,8 @@ const engineerQuestions = [
         console.log ("Try entering the Engineer\'s employee ID again:");
         return false;
       }
-    }
+    },
+    when: (input) => input.role === "Engineer"
   },
   {
     type: 'input',
@@ -122,7 +135,8 @@ const engineerQuestions = [
         console.log ("Try entering the Engineer\'s email address again:");
         return false;
       }
-    }
+    },
+    when: (input) => input.role === "Engineer"
   },
   {
     type: 'input',
@@ -135,12 +149,9 @@ const engineerQuestions = [
         console.log ("Try entering the Engineer\'s Github username again:");
         return false;
       }
-    }
-  }
-]
-
-// INTERN QUESTION
-const internQuestions = [
+    },
+    when: (input) => input.role === "Engineer"
+  },
   {
     type: 'input',
     message: 'Enter the Intern\'s name:',
@@ -152,7 +163,8 @@ const internQuestions = [
         console.log ("Try entering the Intern\'s name again:");
         return false;
       }
-    }
+    },
+    when: (input) => input.role === "Intern"
   },
   {
     type: 'input',
@@ -165,7 +177,8 @@ const internQuestions = [
         console.log ("Try entering the Intern\'s employee ID again:");
         return false;
       }
-    }
+    },
+    when: (input) => input.role === "Intern"
   },
   {
     type: 'input',
@@ -178,7 +191,8 @@ const internQuestions = [
         console.log ("Try entering the Intern\'s email address again:");
         return false;
       }
-    }
+    },
+    when: (input) => input.role === "Intern"
   },
   {
     type: 'input',
@@ -191,10 +205,179 @@ const internQuestions = [
         console.log ("Try entering the Intern\'s school again:");
         return false;
       }
-    }
-    // when: (input) => input.role === "Intern"
+    },
+    when: (input) => input.role === "Intern"
   }
 ]
+
+// // MANAGER QUESTIONS
+// const managerQuestions = [
+//   {
+//     type: 'input',
+//     message: 'Enter the Team Manager\'s name:',
+//     name: 'name',
+//     validate: nameInput => {
+//       if (nameInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Team Manager\'s name again:");
+//         return false;
+//       }
+//     }
+//   },
+//   {
+//     type: 'input',
+//     message: 'Enter the Team Manager\'s employee ID:',
+//     name: 'id',
+//     validate: idInput => {
+//       if (idInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Team Manager\'s employee ID again:");
+//         return false;
+//       }
+//     }
+//   },
+//   {
+//     type: 'input',
+//     message: 'Enter the Team Manager\'s email address:',
+//     name: 'email',
+//     validate: emailInput => {
+//       if (emailInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Team Manager\'s email address again:");
+//         return false;
+//       }
+//     }
+//   },
+//   {
+//     type: 'input',
+//     message: 'Enter the Team Manager\'s office number:',
+//     name: "officeNum",
+//     validate: officeNumInput => {
+//       if (officeNumInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Team Manager\'s office number again:");
+//         return false;
+//       }
+//     }
+//   }
+// ]
+
+// // ENGINEER QUESTIONS
+// const engineerQuestions = [
+//   {
+//     type: 'input',
+//     message: 'Enter the Engineer\'s name:',
+//     name: 'engineerName',
+//     validate: nameInput => {
+//       if (nameInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Engineer\'s name again:");
+//         return false;
+//       }
+//     }
+//   },
+//   {
+//     type: 'input',
+//     message: 'Enter the Engineers\'s ID:',
+//     name: 'engineerId',
+//     validate: idInput => {
+//       if (idInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Engineer\'s employee ID again:");
+//         return false;
+//       }
+//     }
+//   },
+//   {
+//     type: 'input',
+//     message: 'Enter the Engineers\'s email address:',
+//     name: 'engineerEmail',
+//     validate: emailInput => {
+//       if (emailInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Engineer\'s email address again:");
+//         return false;
+//       }
+//     }
+//   },
+//   {
+//     type: 'input',
+//     message: 'Enter the Engineers\'s Github username:',
+//     name: "engineerGithub",
+//     validate: githubInput => {
+//       if (githubInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Engineer\'s Github username again:");
+//         return false;
+//       }
+//     }
+//   }
+// ]
+
+// // INTERN QUESTION
+// const internQuestions = [
+//   {
+//     type: 'input',
+//     message: 'Enter the Intern\'s name:',
+//     name: 'internName',
+//     validate: nameInput => {
+//       if (nameInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Intern\'s name again:");
+//         return false;
+//       }
+//     }
+//   },
+//   {
+//     type: 'input',
+//     message: 'Enter the Intern\'s ID:',
+//     name: 'internId',
+//     validate: idInput => {
+//       if (idInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Intern\'s employee ID again:");
+//         return false;
+//       }
+//     }
+//   },
+//   {
+//     type: 'input',
+//     message: 'Enter the Engineers\'s email address:',
+//     name: 'internEmail',
+//     validate: emailInput => {
+//       if (emailInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Intern\'s email address again:");
+//         return false;
+//       }
+//     }
+//   },
+//   {
+//     type: 'input',
+//     message: 'Enter the Intern\'s school:',
+//     name: "internSchool",
+//     validate: schoolInput => {
+//       if (schoolInput) {
+//         return true;
+//       } else {
+//         console.log ("Try entering the Intern\'s school again:");
+//         return false;
+//       }
+//     }
+//     // when: (input) => input.role === "Intern"
+//   }
+// ]
 
 // INIT FUNCTION
 function init() {
