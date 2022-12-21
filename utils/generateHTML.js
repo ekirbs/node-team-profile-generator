@@ -24,7 +24,18 @@ function generateHTML({userName, location, bio, linkedin, github}) {
 
       <main>
     
-       for loop
+        for (let i = 0; i < teamArray.length; i++) {
+          if (teamArray[i].getRole() === 'Manager') {
+            generateManager(teamArray[i]);
+          }
+          if (teamArray[i].getRole() === 'Engineer') {
+            generateEngineer(teamArray[i]);
+          }
+          if (teamArray[i].getRole() === 'Intern') {
+            generateIntern(teamArray[i]);
+          }
+        }
+        
        fs write
        <div> info
 
