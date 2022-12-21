@@ -24,15 +24,9 @@ function generateHTML({userName, location, bio, linkedin, github}) {
 
       <main>
     
-        <h1>Hi my name is ${userName}</h1>
-    
-        <h2>I live in ${location}</h2>
-    
-        <p>${bio}</p>
-    
-        <h3>My LinkedIn page: ${linkedin}</h3>
-    
-        <h3>My Github page: ${github}</h3>
+       for loop
+       fs write
+       <div> info
 
       </main>
 
