@@ -1,7 +1,60 @@
-function generateHTML({userName, location, bio, linkedin, github}) {
+const generateTeam = (teamArray) => {
+  const teamHTML = [];
+
+  const generateManager = (manager) => {
+    let managerHTML = 
+      `<div>
+        <h1>Manager</h1>
+        <h2>Name: ${manager.name}</h2>
+        <h3>ID: ${manager.id}</h3>
+        <h3>Email: <span id='email'><a href="mailto:${manager.email}">${manager.email}</a></span></h3>
+        <h3>Office Number: ${manager.officeNum}</h3>
+      </div>`;
+    teamHTML.push(managerHTML);
+  };
+
+  const generateEngineer = (engineer) => {
+    let engineerHTML = 
+      `<div>
+        <h1>Engineer</h1>
+        <h2>Name: ${engineer.name}</h2>
+        <h3>ID: ${engineer.id}</h3>
+        <h3>Email: <span id='email'><a href="mailto:${engineer.email}">${engineer.email}</a></span></h3>
+        <h3>Github: <a target="_blank" href"https://github.com/${engineer.github}">${engineer.github}</a></h3>
+      </div>`;
+    teamHTML.push(engineerHTML);
+  };
+
+  const generateIntern = (intern) => {
+    let internHTML = 
+      `<div>
+        <h1>Intern</h1>
+        <h2>Name: ${intern.name}</h2>
+        <h3>ID: ${intern.id}</h3>
+        <h3>Email: <span id='email'><a href="mailto:${intern.email}">${intern.email}</a></span></h3>
+        <h3>School: ${intern.school}</h3>
+      </div>`;
+    teamHTML.push(internHTML);
+  };
+
+  for (let i = 0; i < teamArray.length; i++) {
+    if (teamArray[i].getRole === "Manager") {
+      generateManager(teamArray[i]);
+    }
+    if (teamArray[i].getRole === "Engineer") {
+      generateEngineer(teamArray[i]);
+    }
+    if (teamArray[i].getRole === "Intern") {
+      generateIntern(teamArray[i]);
+    }
+  }
+
+  return teamHTML.join("");
+};
+
+function generateHTML() {
   // create template literal for html file
-  const htmlTemplate = 
-  `<!DOCTYPE html>
+  const htmlTemplate = `<!DOCTYPE html>
     <html lang="en">
 
     <head>
@@ -24,26 +77,13 @@ function generateHTML({userName, location, bio, linkedin, github}) {
 
       <main>
     
-        for (let i = 0; i < teamArray.length; i++) {
-          if (teamArray[i].getRole() === 'Manager') {
-            generateManager(teamArray[i]);
-          }
-          if (teamArray[i].getRole() === 'Engineer') {
-            generateEngineer(teamArray[i]);
-          }
-          if (teamArray[i].getRole() === 'Intern') {
-            generateIntern(teamArray[i]);
-          }
-        }
-        
-       fs write
-       <div> info
+      ${generateTeam(teamArray)}
 
       </main>
 
       <footer></footer>
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
       <script src="./assets/js/script.js"></script>
@@ -51,8 +91,8 @@ function generateHTML({userName, location, bio, linkedin, github}) {
     </body>
 
   </html>`;
-  
-    return htmlTemplate;
-  }
-  
-  module.exports = generateHTML;
+
+  return htmlTemplate;
+}
+
+module.exports = generateHTML;
