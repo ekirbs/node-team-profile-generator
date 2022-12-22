@@ -1,60 +1,61 @@
+let teamHTML = "";
+const generateManager = (manager) => {
+  let managerHTML = `<div>
+      <h2>Manager</h2>
+      <h3>Name: ${manager.name}</h3>
+      <h4>ID: ${manager.id}</h4>
+      <h4>Email: <span id='email'><a href="mailto:${manager.email}">${manager.email}</a></span></h4>
+      <h4>Office Number: ${manager.officeNum}</h4>
+    </div>`;
+  teamHTML += managerHTML;
+};
+
+const generateEngineer = (engineer) => {
+  let engineerHTML = `<div>
+      <h2>Engineer</h2>
+      <h3>Name: ${engineer.name}</h3>
+      <h4>ID: ${engineer.id}</h4>
+      <h4>Email: <span id='email'><a href="mailto:${engineer.email}">${engineer.email}</a></span></h4>
+      <h4>Github: <a target="_blank" href"https://github.com/${engineer.github}">${engineer.github}</a></h4>
+    </div>`;
+  teamHTML += engineerHTML;
+};
+
+const generateIntern = (intern) => {
+  let internHTML = `<div>
+      <h2>Intern</h2>
+      <h3>Name: ${intern.name}</h3>
+      <h4>ID: ${intern.id}</h4>
+      <h4>Email: <span id='email'><a href="mailto:${intern.email}">${intern.email}</a></span></h4>
+      <h4>School: ${intern.school}</h4>
+    </div>`;
+  teamHTML += internHTML;
+};
+
 const generateHTML = (teamArray) => {
   console.table(teamArray);
-  const teamHTML = [];
-
-  const generateManager = (manager) => {
-    let managerHTML = 
-      `<div>
-        <h1>Manager</h1>
-        <h2>Name: ${manager.name}</h2>
-        <h3>ID: ${manager.id}</h3>
-        <h3>Email: <span id='email'><a href="mailto:${manager.email}">${manager.email}</a></span></h3>
-        <h3>Office Number: ${manager.officeNum}</h3>
-      </div>`;
-    teamHTML.push(managerHTML);
-  };
-
-  const generateEngineer = (engineer) => {
-    let engineerHTML = 
-      `<div>
-        <h1>Engineer</h1>
-        <h2>Name: ${engineer.name}</h2>
-        <h3>ID: ${engineer.id}</h3>
-        <h3>Email: <span id='email'><a href="mailto:${engineer.email}">${engineer.email}</a></span></h3>
-        <h3>Github: <a target="_blank" href"https://github.com/${engineer.github}">${engineer.github}</a></h3>
-      </div>`;
-    teamHTML.push(engineerHTML);
-  };
-
-  const generateIntern = (intern) => {
-    let internHTML = 
-      `<div>
-        <h1>Intern</h1>
-        <h2>Name: ${intern.name}</h2>
-        <h3>ID: ${intern.id}</h3>
-        <h3>Email: <span id='email'><a href="mailto:${intern.email}">${intern.email}</a></span></h3>
-        <h3>School: ${intern.school}</h3>
-      </div>`;
-    teamHTML.push(internHTML);
-  };
+  
 
   for (let i = 0; i < teamArray.length; i++) {
-    if (teamArray[i].getRole === "Manager") {
+    if (teamArray[i].getRole() === "Manager") {
+      console.log("adding manager to html");
       generateManager(teamArray[i]);
     }
-    if (teamArray[i].getRole === "Engineer") {
+    if (teamArray[i].getRole() === "Engineer") {
+      console.log("adding engineer to html");
       generateEngineer(teamArray[i]);
     }
-    if (teamArray[i].getRole === "Intern") {
+    if (teamArray[i].getRole() === "Intern") {
+      console.log("adding intern to html");
       generateIntern(teamArray[i]);
     }
   }
 
   // teamHTML.join('');
-//   return teamHTML.join("");
-// };
+  //   return teamHTML.join("");
+  // };
 
-// function generateHTML() {
+  // function generateHTML() {
   // create template literal for html file
   const htmlTemplate = `<!DOCTYPE html>
     <html lang="en">
@@ -75,7 +76,9 @@ const generateHTML = (teamArray) => {
 
     <body>
 
-      <header></header>
+      <header>
+        <h1>Dev Team</h1>
+      </header>
 
       <main>
     
@@ -95,6 +98,6 @@ const generateHTML = (teamArray) => {
   </html>`;
 
   return htmlTemplate;
-}
+};
 
 module.exports = generateHTML;
