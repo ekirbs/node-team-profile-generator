@@ -28,8 +28,8 @@ const addEmployee = () => {
       } else if (answer.role === "Intern") {
         newIntern();
       } else {
-        const teamWebsite = generateHTML(data);
-        fs.writeFile("./dist/teamWebsite.html", teamWebsite, (err) => {
+        const teamWebsite = generateHTML(teamArray);
+        fs.writeFile("./dist/teamWebsite.html", teamWebsite, (err) => { // writeFileSync ?
           err ? console.error(err) : console.log("Website created.");
         });
       }
@@ -104,9 +104,9 @@ const newEngineer = () => {
     {
       type: "input",
       message: "Enter the Engineer's name:",
-      name: "engineerName",
-      validate: (engineerName) => {
-        if (engineerName) {
+      name: "name",
+      validate: (name) => {
+        if (name) {
           return true;
         } else {
           console.log("Try entering the Engineer's name again:");
@@ -117,9 +117,9 @@ const newEngineer = () => {
     {
       type: "input",
       message: "Enter the Engineers's ID:",
-      name: "engineerId",
-      validate: (engineerId) => {
-        if (engineerId) {
+      name: "id",
+      validate: (id) => {
+        if (id) {
           return true;
         } else {
           console.log("Try entering the Engineer's employee ID again:");
@@ -130,9 +130,9 @@ const newEngineer = () => {
     {
       type: "input",
       message: "Enter the Engineers's email address:",
-      name: "engineerEmail",
-      validate: (engineerEmail) => {
-        if (engineerEmail) {
+      name: "email",
+      validate: (email) => {
+        if (email) {
           return true;
         } else {
           console.log("Try entering the Engineer's email address again:");
@@ -143,9 +143,9 @@ const newEngineer = () => {
     {
       type: "input",
       message: "Enter the Engineers's Github username:",
-      name: "engineerGithub",
-      validate: (engineerGithub) => {
-        if (engineerGithub) {
+      name: "github",
+      validate: (github) => {
+        if (github) {
           return true;
         } else {
           console.log("Try entering the Engineer's Github username again:");
@@ -174,7 +174,7 @@ const newEngineer = () => {
       engineerData.name,
       engineerData.id,
       engineerData.email,
-      engineerData.officeNum
+      engineerData.github
     );
     teamArray.push(engineer);
     addEmployee();
@@ -187,9 +187,9 @@ const newIntern = () => {
     {
       type: "input",
       message: "Enter the Intern's name:",
-      name: "internName",
-      validate: (internName) => {
-        if (internName) {
+      name: "name",
+      validate: (name) => {
+        if (name) {
           return true;
         } else {
           console.log("Try entering the Intern's name again:");
@@ -200,9 +200,9 @@ const newIntern = () => {
     {
       type: "input",
       message: "Enter the Intern's ID:",
-      name: "internId",
-      validate: (internId) => {
-        if (internId) {
+      name: "id",
+      validate: (id) => {
+        if (id) {
           return true;
         } else {
           console.log("Try entering the Intern's employee ID again:");
@@ -213,9 +213,9 @@ const newIntern = () => {
     {
       type: "input",
       message: "Enter the Engineers's email address:",
-      name: "internEmail",
-      validate: (internEmail) => {
-        if (internEmail) {
+      name: "email",
+      validate: (email) => {
+        if (email) {
           return true;
         } else {
           console.log("Try entering the Intern's email address again:");
@@ -226,9 +226,9 @@ const newIntern = () => {
     {
       type: "input",
       message: "Enter the Intern's school:",
-      name: "internSchool",
-      validate: (internSchool) => {
-        if (internSchool) {
+      name: "school",
+      validate: (school) => {
+        if (school) {
           return true;
         } else {
           console.log("Try entering the Intern's school again:");
@@ -257,7 +257,7 @@ const newIntern = () => {
       internData.name,
       internData.id,
       internData.email,
-      internData.officeNum
+      internData.school
     );
     teamArray.push(intern);
     addEmployee();

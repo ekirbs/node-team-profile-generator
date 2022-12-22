@@ -1,4 +1,5 @@
-const generateTeam = (teamArray) => {
+const generateHTML = (teamArray) => {
+  console.table(teamArray);
   const teamHTML = [];
 
   const generateManager = (manager) => {
@@ -49,10 +50,11 @@ const generateTeam = (teamArray) => {
     }
   }
 
-  return teamHTML.join("");
-};
+  // teamHTML.join('');
+//   return teamHTML.join("");
+// };
 
-function generateHTML() {
+// function generateHTML() {
   // create template literal for html file
   const htmlTemplate = `<!DOCTYPE html>
     <html lang="en">
@@ -77,7 +79,7 @@ function generateHTML() {
 
       <main>
     
-      ${generateTeam(teamArray)}
+      ${teamHTML}
 
       </main>
 
