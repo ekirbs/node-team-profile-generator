@@ -17,7 +17,7 @@ This program requires installation of inquirer npm.
 
 To use this program, first open index.js in the intergrated terminal.  Then install the npm inquirer v8.2.4.  When this is done, run index in node and answer all the questions when prompted.  After all questions are answered, an HTML file populated with the information given in the prompts will be generated into the dist folder.  
 
-[![Tutorial](./assets/images/tutor-img.png)](https://user-images.githubusercontent.com/117387546/208228069-c379aaaa-e825-4e52-8eff-c82f564dc6bb.mp4)
+[![Tutorial](./assets/images/tutor-img.png)](https://user-images.githubusercontent.com/117387546/209268364-fbfc2f08-ea11-40b1-acf4-0c7dbe73b16d.mp4)
 
 ## Credits
 
