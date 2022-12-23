@@ -4,7 +4,6 @@ const fs = require("fs");
 
 const generateHTML = require("./utils/generateHTML");
 
-// const Employee = require('./lib/Employee');
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
@@ -29,12 +28,13 @@ const addEmployee = () => {
         newIntern();
       } else {
         const teamWebsite = generateHTML(teamArray);
-        fs.writeFile("./dist/teamWebsite.html", teamWebsite, (err) => { // writeFileSync ?
+        fs.writeFile("./dist/teamWebsite.html", teamWebsite, (err) => {
           err ? console.error(err) : console.log("Website created.");
         });
       }
     });
 };
+
 // // MANAGER QUESTIONS
 const newManager = () => {
   return inquirer.prompt([
@@ -90,12 +90,7 @@ const newManager = () => {
         }
       },
     },
-  ]);
-  // .then(managerData => {
-  //   console.table(managerData);
-  //   const manager = new Manager(managerData.name, managerData.id, managerData.email, managerData.officeNum);
-  //   teamArray.push(manager);
-  // })
+  ])
 };
 
 // // ENGINEER QUESTIONS
@@ -153,20 +148,6 @@ const newEngineer = () => {
         }
       },
     },
-    // {
-    //   type: "list",
-    //   message: "Choose an employee to add:",
-    //   name: "role",
-    //   choices: ["Engineer", "Intern", "Done adding employees"],
-    //   validate: (role) => {
-    //     if (role) {
-    //       return true;
-    //     } else {
-    //       console.log("You must choose an option:");
-    //       return false;
-    //     }
-    //   },
-    // },
   ])
   .then((engineerData) => {
     console.table(engineerData);
@@ -236,20 +217,6 @@ const newIntern = () => {
         }
       },
     },
-    // {
-    //   type: "list",
-    //   message: "Choose an employee to add:",
-    //   name: "role",
-    //   choices: ["Engineer", "Intern", "Done adding employees"],
-    //   validate: (role) => {
-    //     if (role) {
-    //       return true;
-    //     } else {
-    //       console.log("You must choose an option:");
-    //       return false;
-    //     }
-    //   },
-    // },
   ])
   .then((internData) => {
     console.table(internData);
@@ -280,55 +247,4 @@ function init() {
   });
 };
 
-//     if (managerData.role === 'Engineer') {
-//       newEngineer();
-//     } else if (managerData.role === 'Intern') {
-//       newIntern();
-//     } else {
-//       const teamWebsite = generateHTML(data);
-//       fs.writeFile('./output/teamWebsite.html', teamWebsite, (err) => {
-//         err ? console.error(err) : console.log('Website created.');
-//       })
-//     };
-//   })
-// };
-
 init();
-
-//     inquirer.prompt(addEmployee)
-//     .then (employeeChoice => {
-//       console.log(employeeChoice)
-//       if (employeeChoice === 'Engineer') {
-//         inquirer.prompt(engineerQuestions)
-//         .then (engineerData => {
-//           console.table(engineerData);
-//           const newEngineer = new Engineer (engineerData);
-//           teamArray.push(newEngineer);
-//           inquirer.prompt(addEmployee)
-//         })
-//       } else if (employeeChoice === 'Intern') {
-//         inquirer.prompt(internQuestions)
-//         .then (internData => {
-//           console.table(internData);
-//           const newIntern = new Intern (internData);
-//           teamArray.push(newIntern);
-//           inquirer.prompt(addEmployee)
-//         })
-//       } else {
-//         const teamWebsite = generateHTML(data);
-//         fs.writeFile('./output/teamWebsite.html', teamWebsite, (err) => {
-//           err ? console.error(err) : console.log('website created.')
-//         })
-//       }
-//     })
-//   })
-// }
-
-// // CONSTRUCTOR FUNCTION
-// function Employee(data) {
-//   this.position = data.position
-//   this.name = data.name;
-//   this.id = data.id;
-//   this.email = data.email;
-//   this.officeNum = data.officeNum
-// }

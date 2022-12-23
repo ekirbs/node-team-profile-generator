@@ -1,4 +1,5 @@
 let teamHTML = "";
+
 const generateManager = (manager) => {
   let managerHTML = `<div>
       <h2>Manager</h2>
@@ -49,14 +50,8 @@ const generateHTML = (teamArray) => {
       console.log("adding intern to html");
       generateIntern(teamArray[i]);
     }
-  }
+  };
 
-  // teamHTML.join('');
-  //   return teamHTML.join("");
-  // };
-
-  // function generateHTML() {
-  // create template literal for html file
   const htmlTemplate = `<!DOCTYPE html>
     <html lang="en">
 
