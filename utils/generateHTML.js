@@ -17,7 +17,7 @@ const generateEngineer = (engineer) => {
       <h3>Name: ${engineer.name}</h3>
       <h4>ID: ${engineer.id}</h4>
       <h4>Email: <span id='email'><a href="mailto:${engineer.email}">${engineer.email}</a></span></h4>
-      <h4>Github: <a target="_blank" href"https://github.com/${engineer.github}">${engineer.github}</a></h4>
+      <h4>Github: <a target="_blank" href="https://github.com/${engineer.github}">https://github.com/${engineer.github}</a></h4>
     </div>`;
   teamHTML += engineerHTML;
 };
