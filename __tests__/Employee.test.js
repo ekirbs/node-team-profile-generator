@@ -1,6 +1,8 @@
+// GLOBAL VARIABLES (REQUIREMENT & TEST EMPLOYEE)
 const Employee = require("../lib/Employee");
 const testEmployee = new Employee('Stanley Jobsen', '189009', 'swordfish@movie.com');
 
+// TESTS
 test ('if an Employee instance is instantiated', () => {
   expect(typeof testEmployee).toEqual('object');
 })

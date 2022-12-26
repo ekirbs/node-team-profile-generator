@@ -1,6 +1,8 @@
+// GLOBAL VARIABLES (REQUIREMENT & TEST EMPLOYEE)
 const Intern = require("../lib/Intern");
 const testIntern = new Intern('Stanley Jobsen', '189009', 'swordfish@movie.com', 'Rutgers');
 
+// TESTS
 test ('if the values for the constructed onject match the inputs given', () => {
   expect(testIntern.name).toBe('Stanley Jobsen');
   expect(testIntern.id).toBe('189009');

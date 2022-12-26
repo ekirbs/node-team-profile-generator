@@ -35,7 +35,7 @@ const addEmployee = () => {
     });
 };
 
-// // MANAGER QUESTIONS
+// MANAGER QUESTIONS
 const newManager = () => {
   return inquirer.prompt([
     {
@@ -93,7 +93,7 @@ const newManager = () => {
   ])
 };
 
-// // ENGINEER QUESTIONS
+// ENGINEER QUESTIONS
 const newEngineer = () => {
   return inquirer.prompt([
     {
@@ -162,7 +162,7 @@ const newEngineer = () => {
   });
 };
 
-// // INTERN QUESTION
+// INTERN QUESTION
 const newIntern = () => {
   return inquirer.prompt([
     {
@@ -231,7 +231,7 @@ const newIntern = () => {
   });
 };
 
-// // INIT FUNCTION
+// INIT FUNCTION
 function init() {
   newManager()
   .then((managerData) => {

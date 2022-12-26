@@ -1,6 +1,8 @@
+// GLOBAL VARIABLES (REQUIREMENT & TEST EMPLOYEE)
 const Manager = require("../lib/Manager");
 const testManager = new Manager('Stanley Jobsen', '189009', 'swordfish@movie.com', '43');
 
+// TESTS
 test ('if the values for the constructed onject match the inputs given', () => {
   expect(testManager.name).toBe('Stanley Jobsen');
   expect(testManager.id).toBe('189009');

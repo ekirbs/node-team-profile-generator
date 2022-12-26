@@ -1,5 +1,7 @@
+// GENERATED HTML STRING
 let teamHTML = "";
 
+// HTML GENERATION FUNCTIONS
 const generateManager = (manager) => {
   let managerHTML = `<div>
       <h2>Manager</h2>
@@ -33,6 +35,7 @@ const generateIntern = (intern) => {
   teamHTML += internHTML;
 };
 
+// FOR LOOP TO INVOKE HTML GENERATION FUNCTIONS FOR EACH TEAM MEMBER IN ARRAY
 const generateHTML = (teamArray) => {
   console.table(teamArray);
   
@@ -52,6 +55,7 @@ const generateHTML = (teamArray) => {
     }
   };
 
+  // HTML TEMPLATE
   const htmlTemplate = `<!DOCTYPE html>
     <html lang="en">
 
@@ -60,7 +64,7 @@ const generateHTML = (teamArray) => {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="Description" content="Enter your description here"/>
+      <meta name="Description" content="Team profile html page generated through node commands."/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <link rel="stylesheet" href="assets/css/style.css">
