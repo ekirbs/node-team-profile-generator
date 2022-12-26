@@ -12,7 +12,7 @@ test ('if the values for the constructed object match the inputs given', () => {
 });
 
 test('if the getName() method returns the name', () => {
-  expect(testEmployee.getName()).teBe('Stanley Jobsen');
+  expect(testEmployee.getName()).toBe('Stanley Jobsen');
 });
 
 test('if the getId() method returns the id', () => {

@@ -9,7 +9,7 @@ test ('if the values for the constructed onject match the inputs given', () => {
 });
 
 test('if the getName() method returns the name', () => {
-  expect(testManager.getName()).teBe('Stanley Jobsen');
+  expect(testManager.getName()).toBe('Stanley Jobsen');
 });
 
 test('if the getId() method returns the id', () => {
