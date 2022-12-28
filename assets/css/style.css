@@ -1,0 +1,32 @@
+/* MANAGER CARD STYLING */
+.manager-card {
+  max-width: 30rem;
+}
+
+.fa-chess-king {
+  font-size: 3rem;
+  color: lightblue;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* ENGINEER CARD STYLING */
+.engineer-card {
+  max-width: 25rem;
+}
+
+.fa-chess-knight {
+  font-size: 3rem;
+  color: lightgreen;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* INTERN CARD STYLING */
+.intern-card {
+  max-width: 20rem;
+}
+
+.fa-chess-pawn {
+  font-size: 3rem;
+  color: tomato;
+  text-shadow: 2px 2px 4px #000000;
+}

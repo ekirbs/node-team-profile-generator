@@ -7,9 +7,9 @@ let internTeamHTML = "";
 const generateManager = (manager) => {
   let managerHTML = 
 `<div class="col-12">
-  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 30rem;">
+  <div class="card manager-card border-dark m-3 text-center mx-auto">
     <div class="card-header">Manager</div>
-    <i class="fas fa-chess-king m-2" style="font-size:3rem;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+    <i class="fas fa-chess-king m-2"></i>
     <div class="card-body">
       <h5 class="card-title">Name: ${manager.name}</h5>
       <h6 class="card-subtitle mb-2 text-muted">ID: ${manager.id}</h6>
@@ -24,9 +24,9 @@ managerTeamHTML += managerHTML;
 const generateEngineer = (engineer) => {
   let engineerHTML = 
 `<div class="col-xs-6 col-sm-4">
-  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 25rem;">
+  <div class="card engineer-card border-dark m-3 text-center mx-auto">
   <div class="card-header">Engineer</div>
-  <i class="fas fa-chess-knight m-2" style="font-size:3rem;color:lightgreen;text-shadow:2px 2px 4px #000000;"></i>
+  <i class="fas fa-chess-knight m-2"></i>
     <div class="card-body">
       <h5 class="card-title">Name: ${engineer.name}</h5>
       <h6 class="card-subtitle mb-2 text-muted">ID: ${engineer.id}</h6>
@@ -41,9 +41,9 @@ engineerTeamHTML += engineerHTML;
 const generateIntern = (intern) => {
   let internHTML = 
 `<div class="col-xs-6 col-sm-3">
-  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 20rem;">
+  <div class="card intern-card border-dark m-3 text-center mx-auto">
   <div class="card-header">Intern</div>
-  <i class="fas fa-chess-pawn m-2" style="font-size:3rem;color:tomato;text-shadow:2px 2px 4px #000000;"></i>
+  <i class="fas fa-chess-pawn m-2"></i>
     <div class="card-body">
       <h5 class="card-title">Name: ${intern.name}</h5>
       <h6 class="card-subtitle mb-2 text-muted">ID: ${intern.id}</h6>
@@ -87,7 +87,7 @@ const generateHTML = (teamArray) => {
       <meta name="Description" content="Team profile html page generated through node commands."/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="../assets/css/style.css">
 
       <title>Team Website</title>
 
@@ -126,7 +126,7 @@ const generateHTML = (teamArray) => {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-      <script src="./assets/js/script.js"></script>
+      <script src="../assets/js/script.js"></script>
 
     </body>
 
