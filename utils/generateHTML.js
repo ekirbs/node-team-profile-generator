@@ -1,38 +1,58 @@
 // GENERATED HTML STRING
-let teamHTML = "";
+let managerTeamHTML = "";
+let engineerTeamHTML = "";
+let internTeamHTML = "";
 
 // HTML GENERATION FUNCTIONS
 const generateManager = (manager) => {
-  let managerHTML = `<div>
-      <h2>Manager</h2>
-      <h3>Name: ${manager.name}</h3>
-      <h4>ID: ${manager.id}</h4>
-      <h4>Email: <span id='email'><a href="mailto:${manager.email}">${manager.email}</a></span></h4>
-      <h4>Office Number: ${manager.officeNum}</h4>
-    </div>`;
-  teamHTML += managerHTML;
+  let managerHTML = 
+`<div class="col-12">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 30rem;">
+    <div class="card-header">Manager</div>
+    <i class="fas fa-chess-king m-2" style="font-size:3rem;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: ${manager.name}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: ${manager.id}</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:${manager.email}" class="card-link">${manager.email}</a></span></p>
+      <p class="card-text">Office Number: ${manager.officeNumber}</p>
+    </div>
+  </div>
+</div>`
+managerTeamHTML += managerHTML;
 };
 
 const generateEngineer = (engineer) => {
-  let engineerHTML = `<div>
-      <h2>Engineer</h2>
-      <h3>Name: ${engineer.name}</h3>
-      <h4>ID: ${engineer.id}</h4>
-      <h4>Email: <span id='email'><a href="mailto:${engineer.email}">${engineer.email}</a></span></h4>
-      <h4>Github: <a target="_blank" href="https://github.com/${engineer.github}">https://github.com/${engineer.github}</a></h4>
-    </div>`;
-  teamHTML += engineerHTML;
+  let engineerHTML = 
+`<div class="col-xs-6 col-sm-4">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 25rem;">
+  <div class="card-header">Engineer</div>
+  <i class="fas fa-chess-knight m-2" style="font-size:3rem;color:lightgreen;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: ${engineer.name}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: ${engineer.id}</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:${engineer.email}" class="card-link">${engineer.email}</a></span></p>
+      <p class="card-text">Github: <a target="_blank" href="https://github.com/${engineer.github}">https://github.com/${engineer.github}</a></p>
+    </div>
+  </div>
+</div>`
+engineerTeamHTML += engineerHTML;
 };
 
 const generateIntern = (intern) => {
-  let internHTML = `<div>
-      <h2>Intern</h2>
-      <h3>Name: ${intern.name}</h3>
-      <h4>ID: ${intern.id}</h4>
-      <h4>Email: <span id='email'><a href="mailto:${intern.email}">${intern.email}</a></span></h4>
-      <h4>School: ${intern.school}</h4>
-    </div>`;
-  teamHTML += internHTML;
+  let internHTML = 
+`<div class="col-xs-6 col-sm-3">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 20rem;">
+  <div class="card-header">Intern</div>
+  <i class="fas fa-chess-pawn m-2" style="font-size:3rem;color:tomato;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: ${intern.name}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: ${intern.id}</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:${intern.email}" class="card-link">${intern.email}</a></span></p>
+      <p class="card-text">School: ${intern.school}</p>
+    </div>
+  </div>
+</div>`
+internTeamHTML += internHTML;
 };
 
 // FOR LOOP TO INVOKE HTML GENERATION FUNCTIONS FOR EACH TEAM MEMBER IN ARRAY
@@ -76,12 +96,28 @@ const generateHTML = (teamArray) => {
     <body>
 
       <header>
-        <h1>Dev Team</h1>
+        <nav class="navbar navbar-dark bg-primary">
+          <span class="navbar-brand mb-0 h1">Dev Team</span>
+        </nav>
       </header>
 
       <main>
-    
-      ${teamHTML}
+
+        <div class="container-fluid">
+
+          <div class="row">
+            ${managerTeamHTML}
+          </div>
+
+          <div class="row">
+            ${engineerTeamHTML}
+          </div>
+
+          <div class="row">
+            ${internTeamHTML}
+          </div>
+
+        </div>
 
       </main>
 

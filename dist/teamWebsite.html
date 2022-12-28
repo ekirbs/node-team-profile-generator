@@ -6,7 +6,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="Description" content="Enter your description here"/>
+      <meta name="Description" content="Team profile html page generated through node commands."/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <link rel="stylesheet" href="assets/css/style.css">
@@ -18,30 +18,127 @@
     <body>
 
       <header>
-        <h1>Dev Team</h1>
+        <nav class="navbar navbar-dark bg-primary">
+          <span class="navbar-brand mb-0 h1">Dev Team</span>
+        </nav>
       </header>
 
       <main>
-    
-      <div>
-      <h2>Manager</h2>
-      <h3>Name: Eric</h3>
-      <h4>ID: 23</h4>
-      <h4>Email: <span id='email'><a href="mailto:eric@test.com">eric@test.com</a></span></h4>
-      <h4>Office Number: undefined</h4>
-    </div><div>
-      <h2>Engineer</h2>
-      <h3>Name: Bob</h3>
-      <h4>ID: 77</h4>
-      <h4>Email: <span id='email'><a href="mailto:bob@test.com">bob@test.com</a></span></h4>
-      <h4>Github: <a target="_blank" href="https://github.com/bobbo">https://github.com/bobbo</a></h4>
-    </div><div>
-      <h2>Intern</h2>
-      <h3>Name: Kirk</h3>
-      <h4>ID: 765</h4>
-      <h4>Email: <span id='email'><a href="mailto:kirk@test.com">kirk@test.com</a></span></h4>
-      <h4>School: Rutgers</h4>
+
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-12">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 30rem;">
+    <div class="card-header">Manager</div>
+    <i class="fas fa-chess-king m-2" style="font-size:3rem;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: Eric</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: 23</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:eric@test.com" class="card-link">eric@test.com</a></span></p>
+      <p class="card-text">Office Number: 11</p>
     </div>
+  </div>
+</div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 25rem;">
+  <div class="card-header">Engineer</div>
+  <i class="fas fa-chess-knight m-2" style="font-size:3rem;color:lightgreen;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: Bob</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: 45</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:bob@test.com" class="card-link">bob@test.com</a></span></p>
+      <p class="card-text">Github: <a target="_blank" href="https://github.com/bobbo">https://github.com/bobbo</a></p>
+    </div>
+  </div>
+</div><div class="col-xs-6 col-sm-4">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 25rem;">
+  <div class="card-header">Engineer</div>
+  <i class="fas fa-chess-knight m-2" style="font-size:3rem;color:lightgreen;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: Arjun</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: 87</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:arjun@test.com" class="card-link">arjun@test.com</a></span></p>
+      <p class="card-text">Github: <a target="_blank" href="https://github.com/Rjune">https://github.com/Rjune</a></p>
+    </div>
+  </div>
+</div><div class="col-xs-6 col-sm-4">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 25rem;">
+  <div class="card-header">Engineer</div>
+  <i class="fas fa-chess-knight m-2" style="font-size:3rem;color:lightgreen;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: Susan</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: 66</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:susan@test.com" class="card-link">susan@test.com</a></span></p>
+      <p class="card-text">Github: <a target="_blank" href="https://github.com/susieQ">https://github.com/susieQ</a></p>
+    </div>
+  </div>
+</div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6 col-sm-3">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 20rem;">
+  <div class="card-header">Intern</div>
+  <i class="fas fa-chess-pawn m-2" style="font-size:3rem;color:tomato;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: Kirk</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: 5746</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:kirk@test.com" class="card-link">kirk@test.com</a></span></p>
+      <p class="card-text">School: Rutgers</p>
+    </div>
+  </div>
+</div><div class="col-xs-6 col-sm-3">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 20rem;">
+  <div class="card-header">Intern</div>
+  <i class="fas fa-chess-pawn m-2" style="font-size:3rem;color:tomato;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: J'Davius</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: 8947</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:jd@test.com" class="card-link">jd@test.com</a></span></p>
+      <p class="card-text">School: UCLA</p>
+    </div>
+  </div>
+</div><div class="col-xs-6 col-sm-3">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 20rem;">
+  <div class="card-header">Intern</div>
+  <i class="fas fa-chess-pawn m-2" style="font-size:3rem;color:tomato;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: Michael</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: 3984</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:mike@test.com" class="card-link">mike@test.com</a></span></p>
+      <p class="card-text">School: Alabama</p>
+    </div>
+  </div>
+</div><div class="col-xs-6 col-sm-3">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 20rem;">
+  <div class="card-header">Intern</div>
+  <i class="fas fa-chess-pawn m-2" style="font-size:3rem;color:tomato;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: Fabiano</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: 9383</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:fabi@test.com" class="card-link">fabi@test.com</a></span></p>
+      <p class="card-text">School: Oxford</p>
+    </div>
+  </div>
+</div><div class="col-xs-6 col-sm-3">
+  <div class="card border-dark m-3 text-center mx-auto" style="max-width: 20rem;">
+  <div class="card-header">Intern</div>
+  <i class="fas fa-chess-pawn m-2" style="font-size:3rem;color:tomato;text-shadow:2px 2px 4px #000000;"></i>
+    <div class="card-body">
+      <h5 class="card-title">Name: Samantha</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: 1189</h6>
+      <p class="card-text">Email: <span id='email'><a href="mailto:sam@test.com" class="card-link">sam@test.com</a></span></p>
+      <p class="card-text">School: NYU</p>
+    </div>
+  </div>
+</div>
+          </div>
+
+        </div>
 
       </main>
 

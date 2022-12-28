@@ -1,6 +1,6 @@
 # Node Team Profile Generator
 
-This is my Team Profile Generator.  It is a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.  The purpose of this project was to practice my use of node.js, npm installation and usage, callback functions, and how to pass data from one function to another.  Future improvements include at least some base-level of styling on the final html page.  I also played around with methods of condensing the questions into one set, but pivoted off due to time constraints.
+This is my Team Profile Generator.  It is a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.  The purpose of this project was to practice my use of node.js, npm installation and usage, callback functions, and how to pass data from one function to another.  I gave it some base styling including fontawesome chess icons (King for Manager, Knight for Engineer, and Pawn for Intern).  I also played around with methods of condensing the questions into one set, but pivoted off due to time constraints.
 
 ## Table of Contents
 
